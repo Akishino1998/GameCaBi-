@@ -5,6 +5,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * 
  * @author (your name) 
  * @version (a version number or a date)
+dwdwdawd
  */
 public class chara extends Actor
 {
@@ -77,3 +78,5 @@ public class chara extends Actor
         }
     }
 }
+
+
