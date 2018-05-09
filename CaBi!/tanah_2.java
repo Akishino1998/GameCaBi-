@@ -26,7 +26,7 @@ public class tanah_2 extends Actor
     public tanah_2()
     {
         GreenfootImage image = getImage();
-        image.scale(image.getWidth() - 70, image.getHeight() - 40);
+        image.scale(image.getWidth() - 140, image.getHeight() - 40);
         setImage(image);
     }
 }
