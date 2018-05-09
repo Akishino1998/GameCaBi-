@@ -35,9 +35,10 @@ public class chara extends Actor
         if(Greenfoot.isKeyDown("up")){
             if(isTouching(tanah_1.class)){
                 if(keyup == 1){
-                   for(int i = 0; i<=55;i++){
+                for(int i = 0; i<=55;i++){
                     setLocation(getX(), getY()-2);
                     Greenfoot.delay(1);
+                    
                     belok();
                     }
                 keyup=0;
@@ -54,20 +55,36 @@ public class chara extends Actor
                 keyup=0;
                 }
             }
+            if(isTouching(penutup.class)){
+                if(keyup == 1){
+                for(int i = 0; i<=55;i++){
+                    setLocation(getX(), getY()-2);
+                    Greenfoot.delay(1);
+                    
+                    belok();
+                    }
+                keyup=0;
+                }
+            }
         }
     }
     public void jatuh(){
-        if(!isTouching(tanah_2.class)){
-            if(!isTouching(tanah_1.class)){
-           setLocation(getX(), getY()+2);
-           Greenfoot.delay(1);
-          }
-          if(isTouching(tanah_1.class)){
-            keyup=1;
-          }
+        if(!isTouching(penutup.class)){
+            if(!isTouching(tanah_2.class)){
+              if(!isTouching(tanah_1.class)){
+                setLocation(getX(), getY()+2);
+                Greenfoot.delay(1);
+              }
+              if(isTouching(tanah_1.class)){
+                keyup=1;
+              }
+            }
         }
         
         if(isTouching(tanah_2.class)){
+            keyup=1;
+        }
+        if(isTouching(penutup.class)){
             keyup=1;
         }
         

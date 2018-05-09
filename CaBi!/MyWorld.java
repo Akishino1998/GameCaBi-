@@ -19,7 +19,7 @@ public class MyWorld extends World
     public MyWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(1000, 600, 1, false);
+        super(1000, 600, 1);
         addObject(tanah, 50, 600);
         addObject(tanah2, 300, 500);
         addObject(tanah3, 100, 300);
@@ -38,11 +38,13 @@ public class MyWorld extends World
     public gameover selesai = new gameover();
     public void act(){
 
-        if(karakter.getY()>=getHeight()){
+        if(karakter.getY()+1>=getHeight()){
             addObject(selesai, getWidth()/2, getHeight()/2);
             Greenfoot.stop();
+            
 
         }
+        showText("X = "+String.valueOf(karakter.getX())+", Y = "+String.valueOf(karakter.getY()),100,50);
     } 
 
     /**
@@ -54,5 +56,8 @@ public class MyWorld extends World
         tanah_1 tanah_1 = new tanah_1();
         addObject(tanah_1,724,325);        
         tanah_1.setLocation(995,586);
+        penutup penutup = new penutup();
+        addObject(penutup,887,488);
+        penutup.setLocation(898,464);
     }
 }
