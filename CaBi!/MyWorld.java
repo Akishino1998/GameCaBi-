@@ -26,22 +26,33 @@ public class MyWorld extends World
         addObject(tanahgerak, 400, 200);
         addObject(karakter, 50, 500);
         addObject(papanskor, 517, 40);
-        
+
         for(int i= 0; i<3; i++){
             addObject(new skor_isi(),417+bintang, 55);
             bintang+=50;
-            
+
         }
-        
+
+        prepare();
     }
     public gameover selesai = new gameover();
     public void act(){
-        
+
         if(karakter.getY()>=getHeight()){
             addObject(selesai, getWidth()/2, getHeight()/2);
             Greenfoot.stop();
-            
+
         }
     } 
-   
+
+    /**
+     * Prepare the world for the start of the program.
+     * That is: create the initial objects and add them to the world.
+     */
+    private void prepare()
+    {
+        tanah_1 tanah_1 = new tanah_1();
+        addObject(tanah_1,724,325);        
+        tanah_1.setLocation(995,586);
+    }
 }
