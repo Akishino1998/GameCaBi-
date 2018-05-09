@@ -16,4 +16,10 @@ public class pintu extends Actor
     {
         // Add your action code here.
     }    
+    public pintu()
+    {
+        GreenfootImage image = getImage();
+        image.scale(image.getWidth() - 400, image.getHeight() - 440);
+        setImage(image);
+    }
 }

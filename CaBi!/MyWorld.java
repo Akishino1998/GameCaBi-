@@ -59,5 +59,8 @@ public class MyWorld extends World
         penutup penutup = new penutup();
         addObject(penutup,887,488);
         penutup.setLocation(898,464);
+        pintu pintu = new pintu();
+        addObject(pintu,862,378);
+        pintu.setLocation(975,533);
     }
 }
