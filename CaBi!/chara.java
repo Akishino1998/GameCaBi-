@@ -23,6 +23,7 @@ public class chara extends Actor
         loncat();
         jatuh();
         selesai();
+        
     }   
     public void belok(){
         if(Greenfoot.isKeyDown("right")){
@@ -43,6 +44,7 @@ public class chara extends Actor
                     belok();
                     }
                 keyup=0;
+                gesertanah();
                 }
             }
             if(isTouching(tanah_2.class)){
@@ -54,6 +56,7 @@ public class chara extends Actor
                     belok();
                     }
                 keyup=0;
+                gesertanah();
                 }
             }
             if(isTouching(penutup.class)){
@@ -90,15 +93,17 @@ public class chara extends Actor
         }
         
     }
-    public void bertahan(){
-        if(isTouching(tanah_2.class)){
-            
+    int bintang = 0;
+    //public penutup penutup = new penutup();
+    public void gesertanah(){
+        if(isTouching(skor_isi.class)){
+            bintang++;
         }
     }
-    public pintu finis = new pintu();
+    public finis finiss = new finis();
     protected void selesai(){
-        if(isTouching(pintu.class)){
-            getWorld().addObject(finis, 500, 300);
+        if(isTouching(pintu.class) && bintang >= 3){
+            getWorld().addObject(finiss, 500, 300);
             Greenfoot.stop();
         }
         
