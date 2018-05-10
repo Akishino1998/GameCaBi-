@@ -22,6 +22,7 @@ public class chara extends Actor
         belok();
         loncat();
         jatuh();
+        selesai();
     }   
     public void belok(){
         if(Greenfoot.isKeyDown("right")){
@@ -93,6 +94,14 @@ public class chara extends Actor
         if(isTouching(tanah_2.class)){
             
         }
+    }
+    public pintu finis = new pintu();
+    protected void selesai(){
+        if(isTouching(pintu.class)){
+            getWorld().addObject(finis, 500, 300);
+            Greenfoot.stop();
+        }
+        
     }
 }
 

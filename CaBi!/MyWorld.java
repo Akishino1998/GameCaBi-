@@ -36,15 +36,15 @@ public class MyWorld extends World
         prepare();
     }
     public gameover selesai = new gameover();
+    
     public void act(){
 
         if(karakter.getY()+1>=getHeight()){
             addObject(selesai, getWidth()/2, getHeight()/2);
             Greenfoot.stop();
-            
-
         }
         showText("X = "+String.valueOf(karakter.getX())+", Y = "+String.valueOf(karakter.getY()),100,50);
+        
     } 
 
     /**
