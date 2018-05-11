@@ -15,5 +15,6 @@ public class start extends tombol
     public void act() 
     {
         // Add your action code here.
+        
     }    
 }

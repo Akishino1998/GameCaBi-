@@ -1,5 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-import java.awt.Color;
+
 /**
  * Write a description of class MyWorld here.
  * 
@@ -26,7 +26,6 @@ public class MyWorld extends World
         addObject(tanahgerak, 400, 200);
         addObject(karakter, 50, 500);
         addObject(papanskor, 517, 40);
-        img.setColor(Color.WHITE);
 
         for(int i= 0; i<3; i++){
             addObject(new skor_isi(),417+bintang, 55);
@@ -39,12 +38,14 @@ public class MyWorld extends World
     public gameover selesai = new gameover();
     
     public void act(){
-
+        
         if(karakter.getY()+1>=getHeight()){
             addObject(selesai, getWidth()/2, getHeight()/2);
             Greenfoot.stop();
         }
         showText("X = "+String.valueOf(karakter.getX())+", Y = "+String.valueOf(karakter.getY()),100,50);
+        splashStart splash = new splashStart();
+        Greenfoot.setWorld(splash);
         
     } 
 
