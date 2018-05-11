@@ -1,5 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
+import java.awt.Color;
 /**
  * Write a description of class MyWorld here.
  * 
@@ -26,6 +26,7 @@ public class MyWorld extends World
         addObject(tanahgerak, 400, 200);
         addObject(karakter, 50, 500);
         addObject(papanskor, 517, 40);
+        img.setColor(Color.WHITE);
 
         for(int i= 0; i<3; i++){
             addObject(new skor_isi(),417+bintang, 55);
