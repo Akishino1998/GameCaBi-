@@ -51,5 +51,10 @@ public class splashStart extends World
         bantuan bantuan = new bantuan();
         addObject(bantuan,856,560);
         bantuan.setLocation(849,46);
+        chara_start chara_start2 = new chara_start();
+        addObject(chara_start2,286,242);
+        chara_start.setLocation(673,271);
+        removeObject(chara_start);
+        chara_start2.setLocation(504,192);
     }
 }

@@ -9,6 +9,11 @@ dwdwdawd
  */
 public class chara extends Actor
 {
+    int jeda = 1;
+    String karakter_jalan_kanan[] = {"Walk (1).png","Walk (2).png","Walk (3).png","Walk (4).png","Walk (5).png","Walk (5).png",
+        "Walk (6).png","Walk (7).png","Walk (8).png","Walk (9).png","Walk (10).png","Walk (11).png","Walk (12).png",
+        "Walk (13).png","Walk (14).png","Walk (15).png","Walk (16).png","Walk (17).png","Walk (18).png","Walk (19).png","Walk (20).png"};
+    int stat_karakter_jalan_kanan = 0; 
     public chara(){
         GreenfootImage image = getImage();
         image.scale(image.getWidth() - 350, image.getHeight() - 400);
@@ -28,9 +33,36 @@ public class chara extends Actor
     public void belok(){
         if(Greenfoot.isKeyDown("right")){
             setLocation(getX()+2, getY());
+            if(jeda==0){
+                GreenfootImage baseImg = new GreenfootImage(karakter_jalan_kanan[stat_karakter_jalan_kanan]);
+                GreenfootImage image = new GreenfootImage(baseImg);
+                image.scale(image.getWidth() - 350, image.getHeight() - 400);
+                setImage(image);
+                stat_karakter_jalan_kanan++;
+                if(stat_karakter_jalan_kanan==20){
+                    stat_karakter_jalan_kanan = 0;
+                }
+                jeda=1;
+            }else{
+                jeda--;
+            }
         }
         if(Greenfoot.isKeyDown("left")){
             setLocation(getX()-2, getY());
+            if(jeda==0){
+                
+                GreenfootImage baseImg = new GreenfootImage(karakter_jalan_kanan[stat_karakter_jalan_kanan]);
+                GreenfootImage image = new GreenfootImage(baseImg);
+                image.scale(image.getWidth() - 350, image.getHeight() - 400);
+                setImage(image);
+                stat_karakter_jalan_kanan--;
+                if(stat_karakter_jalan_kanan==0){
+                    stat_karakter_jalan_kanan = 19;
+                }
+                jeda=1;
+            }else{
+                jeda--;
+            }
         }
     }
     public void loncat(){
