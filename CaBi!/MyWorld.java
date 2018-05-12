@@ -44,8 +44,8 @@ public class MyWorld extends World
             Greenfoot.stop();
         }
         showText("X = "+String.valueOf(karakter.getX())+", Y = "+String.valueOf(karakter.getY()),100,50);
-        splashStart splash = new splashStart();
-        Greenfoot.setWorld(splash);
+        //splashStart splash = new splashStart();
+        //Greenfoot.setWorld(splash);
         
     } 
 
