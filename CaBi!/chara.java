@@ -133,10 +133,11 @@ public class chara extends Actor
         }
     }
     public finis finiss = new finis();
+    
     protected void selesai(){
         if(isTouching(pintu.class) && bintang >= 3){
             getWorld().addObject(finiss, 500, 300);
-            Greenfoot.stop();
+            //Greenfoot.stop();
         }
         
     }

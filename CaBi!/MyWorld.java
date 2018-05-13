@@ -36,14 +36,22 @@ public class MyWorld extends World
         prepare();
     }
     public gameover selesai = new gameover();
-    
+    ulang ulang = new ulang();
+    boolean gameover = false;
+    public void selesai(){
+        if(gameover == false){
+            if(karakter.getY()+1>=getHeight()){
+                addObject(selesai, getWidth()/2, getHeight()/2);
+                addObject(ulang, 500, 400);
+                removeObjects(getObjects(chara.class));
+                gameover = true;
+            }
+        }
+    }
     public void act(){
         
-        if(karakter.getY()+1>=getHeight()){
-            addObject(selesai, getWidth()/2, getHeight()/2);
-            Greenfoot.stop();
-        }
-        showText("X = "+String.valueOf(karakter.getX())+", Y = "+String.valueOf(karakter.getY()),100,50);
+        selesai();
+        //showText("X = "+String.valueOf(karakter.getX())+", Y = "+String.valueOf(karakter.getY()),100,50);
         //splashStart splash = new splashStart();
         //Greenfoot.setWorld(splash);
         
@@ -69,57 +77,11 @@ public class MyWorld extends World
         tanah_12.setLocation(269,249);
         tanah_1 tanah_13 = new tanah_1();
         addObject(tanah_13,609,399);
-        tanah_13.setLocation(609,399);
-        tanah_13.setLocation(609,399);
-        tanah_13.setLocation(609,399);
-        tanah_13.setLocation(609,399);
-        tanah_13.setLocation(609,399);
-        tanah_13.setLocation(609,399);
-        tanah_13.setLocation(609,399);
-        tanah_13.setLocation(609,399);
-        tanah_13.setLocation(609,399);
-        tanah_13.setLocation(609,399);
-        tanah_13.setLocation(609,399);
-        tanah_13.setLocation(609,399);
-        tanah_13.setLocation(609,399);
-        tanah_13.setLocation(609,399);
-        tanah_13.setLocation(609,399);
-        tanah_13.setLocation(609,399);
-        tanah_13.setLocation(609,399);
-        tanah_13.setLocation(928,348);
-        tanah_13.setLocation(928,348);
-        tanah_13.setLocation(928,348);
-        tanah_13.setLocation(928,348);
-        tanah_13.setLocation(928,348);
-        tanah_13.setLocation(928,348);
-        tanah_13.setLocation(928,348);
-        tanah_13.setLocation(928,348);
-        tanah_13.setLocation(928,348);
-        tanah_13.setLocation(928,348);
-        tanah_13.setLocation(928,348);
-        tanah_13.setLocation(928,348);
-        tanah_13.setLocation(928,348);
-        tanah_13.setLocation(928,348);
-        tanah_13.setLocation(928,348);
-        tanah_13.setLocation(928,348);
-        tanah_13.setLocation(928,348);
-        tanah_13.setLocation(962,348);
-        tanah_13.setLocation(962,348);
-        tanah_13.setLocation(962,348);
-        tanah_13.setLocation(962,348);
-        tanah_13.setLocation(962,348);
-        tanah_13.setLocation(962,348);
-        tanah_13.setLocation(962,348);
-        tanah_13.setLocation(962,348);
-        tanah_13.setLocation(962,348);
-        tanah_13.setLocation(962,348);
-        tanah_13.setLocation(962,348);
-        tanah_13.setLocation(962,348);
-        tanah_13.setLocation(993,349);
-        tanah_13.setLocation(993,349);
-        tanah_13.setLocation(993,349);
-        tanah_13.setLocation(993,349);
-        tanah_13.setLocation(993,349);
         tanah_13.setLocation(989,326);
+        bantuan bantuan = new bantuan();
+        addObject(bantuan,768,49);
+        bantuan.setLocation(867,52);
+        bantuan.setLocation(958,42);
+        
     }
 }
