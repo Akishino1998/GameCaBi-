@@ -56,5 +56,6 @@ public class splashStart extends World
         chara_start.setLocation(673,271);
         removeObject(chara_start);
         chara_start2.setLocation(504,192);
+        removeObject(bantuan);
     }
 }

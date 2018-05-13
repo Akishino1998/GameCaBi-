@@ -20,15 +20,15 @@ public class chara_start extends Actor
     
     public void act() 
     {
-        if(jeda==0){
+        //if(jeda==0){
             setImage(chara[stat]);
             stat++;
             if(stat==20){
                 stat = 0;
             }
             //jeda=10;
-        }else{
-            jeda--;
-        }
+        //}else{
+         ///   jeda--;
+        //}
     }   
 }
