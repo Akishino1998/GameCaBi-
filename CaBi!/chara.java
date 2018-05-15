@@ -13,7 +13,7 @@ public class chara extends Actor
     String karakter_jalan_kanan[] = {"Walk (1).png","Walk (2).png","Walk (3).png","Walk (4).png","Walk (5).png","Walk (5).png",
         "Walk (6).png","Walk (7).png","Walk (8).png","Walk (9).png","Walk (10).png","Walk (11).png","Walk (12).png",
         "Walk (13).png","Walk (14).png","Walk (15).png","Walk (16).png","Walk (17).png","Walk (18).png","Walk (19).png","Walk (20).png"};
-    int stat_karakter_jalan_kanan = 0; 
+    int stat_karakter_jalan_kanan = 10; 
     public chara(){
         GreenfootImage image = getImage();
         image.scale(image.getWidth() - 350, image.getHeight() - 400);
