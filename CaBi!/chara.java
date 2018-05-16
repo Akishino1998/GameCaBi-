@@ -40,7 +40,7 @@ public class chara extends Actor
                 setImage(image);
                 stat_karakter_jalan_kanan++;
                 if(stat_karakter_jalan_kanan==20){
-                    stat_karakter_jalan_kanan = 0;
+                    stat_karakter_jalan_kanan = 5;
                 }
                 jeda=1;
             }else{
@@ -56,7 +56,7 @@ public class chara extends Actor
                 image.scale(image.getWidth() - 350, image.getHeight() - 400);
                 setImage(image);
                 stat_karakter_jalan_kanan--;
-                if(stat_karakter_jalan_kanan==1){
+                if(stat_karakter_jalan_kanan==5){
                     stat_karakter_jalan_kanan = 19;
                 }
                 jeda=1;

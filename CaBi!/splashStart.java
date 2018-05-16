@@ -26,9 +26,9 @@ public class splashStart extends World
         if (Greenfoot.mouseClicked(null)) Greenfoot.setWorld(new MyWorld());
         start start = new start();
         if(Greenfoot.mousePressed(start)){
-            showText("dawdadadawda", 100, 50);
+            //showText("dawdadadawda", 100, 50);
         }
-        showText("dawdadadawda", 50, 50);
+        //showText("dawdadadawda", 50, 50);
     }
 
     /**
@@ -57,5 +57,7 @@ public class splashStart extends World
         removeObject(chara_start);
         chara_start2.setLocation(504,192);
         removeObject(bantuan);
+        chara_start2.setLocation(793,345);
+        chara_start2.setLocation(802,178);
     }
 }
