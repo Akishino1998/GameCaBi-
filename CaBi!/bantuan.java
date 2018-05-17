@@ -15,6 +15,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 
 
+
+
+
+
 public class bantuan extends tombol
 {
     /**
