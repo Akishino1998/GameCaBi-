@@ -1,12 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-/**
- * Write a description of class chara here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
-dwdwdawd
- */
 public class chara extends Actor
 {
     int jeda = 1;
@@ -23,12 +16,10 @@ public class chara extends Actor
     int keyup = 1;
     public void act() 
     {
-        
         belok();
         loncat();
         jatuh();
         selesai();
-        
     }   
     public void belok(){
         if(Greenfoot.isKeyDown("right")){
@@ -50,7 +41,6 @@ public class chara extends Actor
         if(Greenfoot.isKeyDown("left")){
             setLocation(getX()-2, getY());
             if(jeda==0){
-                
                 GreenfootImage baseImg = new GreenfootImage(karakter_jalan_kanan[stat_karakter_jalan_kanan]);
                 GreenfootImage image = new GreenfootImage(baseImg);
                 image.scale(image.getWidth() - 350, image.getHeight() - 400);
@@ -72,7 +62,6 @@ public class chara extends Actor
                 for(int i = 0; i<=55;i++){
                     setLocation(getX(), getY()-2);
                     Greenfoot.delay(1);
-
                     belok();
                     }
                 keyup=0;
@@ -84,7 +73,6 @@ public class chara extends Actor
                 for(int i = 0; i<=55;i++){
                     setLocation(getX(), getY()-2);
                     Greenfoot.delay(1);
-                    
                     belok();
                     }
                 keyup=0;
@@ -96,7 +84,6 @@ public class chara extends Actor
                 for(int i = 0; i<=55;i++){
                     setLocation(getX(), getY()-2);
                     Greenfoot.delay(1);
-                    
                     belok();
                     }
                 keyup=0;
@@ -126,7 +113,6 @@ public class chara extends Actor
         
     }
     int bintang = 0;
-    //public penutup penutup = new penutup();
     public void gesertanah(){
         if(isTouching(skor_nol.class)){
             bintang++;

@@ -1,17 +1,8 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-/**
- * Write a description of class chara_start here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
+
 public class chara_start extends Actor
 {
-    /**
-     * Act - do whatever the chara_start wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
     int jeda = 5;
     int stat = 0;
     String chara[] = {"Walk (1).png","Walk (2).png","Walk (3).png","Walk (4).png","Walk (5).png","Walk (5).png",

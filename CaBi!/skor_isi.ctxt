@@ -1,9 +1,5 @@
 #BlueJ class context
 comment0.target=skor_isi
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ skor_isi\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
 comment1.params=
-comment1.target=void\ act()
-comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ skor_isi\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
-comment2.params=
-comment2.target=skor_isi()
-numComments=3
+comment1.target=skor_isi()
+numComments=2
