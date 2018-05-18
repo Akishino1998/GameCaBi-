@@ -72,7 +72,7 @@ public class chara extends Actor
                 for(int i = 0; i<=55;i++){
                     setLocation(getX(), getY()-2);
                     Greenfoot.delay(1);
-                    
+
                     belok();
                     }
                 keyup=0;
@@ -128,16 +128,15 @@ public class chara extends Actor
     int bintang = 0;
     //public penutup penutup = new penutup();
     public void gesertanah(){
-        if(isTouching(skor_isi.class)){
+        if(isTouching(skor_nol.class)){
             bintang++;
         }
     }
     public finis finiss = new finis();
-    
     protected void selesai(){
         if(isTouching(pintu.class) && bintang >= 3){
             getWorld().addObject(finiss, 500, 300);
-            //Greenfoot.stop();
+            Greenfoot.stop();
         }
         
     }

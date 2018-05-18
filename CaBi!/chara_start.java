@@ -12,7 +12,7 @@ public class chara_start extends Actor
      * Act - do whatever the chara_start wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    int jeda = 10;
+    int jeda = 5;
     int stat = 0;
     String chara[] = {"Walk (1).png","Walk (2).png","Walk (3).png","Walk (4).png","Walk (5).png","Walk (5).png",
         "Walk (6).png","Walk (7).png","Walk (8).png","Walk (9).png","Walk (10).png","Walk (11).png","Walk (12).png",
@@ -20,15 +20,19 @@ public class chara_start extends Actor
     
     public void act() 
     {
-        //if(jeda==0){
+        if(jeda==0){
             setImage(chara[stat]);
             stat++;
             if(stat==20){
                 stat = 0;
             }
-            //jeda=10;
-        //}else{
-         ///   jeda--;
-        //}
+            jeda=10;
+        }else{
+            jeda--;
+        }
+        
+        if(stat < 0){
+            stat = 2;
+        }
     }   
 }

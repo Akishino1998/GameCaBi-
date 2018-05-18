@@ -16,6 +16,9 @@ public class MyWorld extends World
     public chara karakter = new chara();
     public skor_papan papanskor = new skor_papan();
     int bintang = 50;
+    
+    GreenfootSound sound = new GreenfootSound("Play-sound.mp3");
+        
     public MyWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
@@ -28,11 +31,13 @@ public class MyWorld extends World
         addObject(papanskor, 517, 40);
 
         for(int i= 0; i<3; i++){
-            addObject(new skor_isi(),417+bintang, 55);
+            addObject(new skor_nol(),417+bintang, 55);
             bintang+=50;
 
         }
-
+        sound.stop();
+        sound.playLoop();
+        
         prepare();
     }
     public gameover selesai = new gameover();
@@ -44,6 +49,9 @@ public class MyWorld extends World
                 addObject(selesai, getWidth()/2, getHeight()/2);
                 addObject(ulang, 500, 400);
                 removeObjects(getObjects(chara.class));
+                sound.pause();
+                GreenfootSound sound = new GreenfootSound("Gameover-sound.mp3");
+                sound.play();
                 gameover = true;
             }
         }
@@ -54,6 +62,7 @@ public class MyWorld extends World
         //showText("X = "+String.valueOf(karakter.getX())+", Y = "+String.valueOf(karakter.getY()),100,50);
         //splashStart splash = new splashStart();
         //Greenfoot.setWorld(splash);
+        
         
     } 
 

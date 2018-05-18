@@ -19,9 +19,10 @@ public class splashStart extends World
         super(1000, 600, 1);
         prepare();
         
+        
     }
-
-
+    GreenfootSound sound = new GreenfootSound("Start-sound.mp3");
+    boolean play = false;
     public void act(){
         if (Greenfoot.mouseClicked(null)) Greenfoot.setWorld(new MyWorld());
         start start = new start();
@@ -29,6 +30,12 @@ public class splashStart extends World
             //showText("dawdadadawda", 100, 50);
         }
         //showText("dawdadadawda", 50, 50);
+        sound.play();
+        if(Greenfoot.mouseClicked(start.class)){
+            MyWorld MyWorld = new MyWorld();
+            Greenfoot.setWorld(MyWorld);
+            sound.pause();
+        }
     }
 
     /**

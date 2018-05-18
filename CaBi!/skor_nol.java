@@ -12,9 +12,18 @@ public class skor_nol extends Actor
      * Act - do whatever the skor_nol wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    boolean play = false;
     public void act() 
     {
-        // Add your action code here.
+        if(isTouching(chara.class)){
+            if(play == false){   
+                GreenfootSound sound = new GreenfootSound("Get-sound.mp3");
+                sound.play();
+                play = true;
+            }
+        }else{
+            play = false;
+        }
     }    
     public skor_nol()
     {
